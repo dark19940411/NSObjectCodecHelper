@@ -123,6 +123,6 @@ And the decoded object's data is perfectly settled.
 
 ![Decoded Object Image](./images/DecodedPrimImage.jpg)
 
-#License
+# License
 This Project is using MIT license by now.
 
