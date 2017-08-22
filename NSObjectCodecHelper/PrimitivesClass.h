@@ -23,10 +23,6 @@
 @property (nonatomic, assign)bool boolProp;
 @property (nonatomic, assign)float floatProp;
 @property (nonatomic, assign)double doubleProp;
-//@property (nonatomic, assign)long double longDoubleProp;
-//@property (nonatomic, assign)CGPoint cgpointProp;
-//@property (nonatomic, assign)CGRect cgrectProp;
-//@property (nonatomic, assign)CGAffineTransform cgafTransformProp;
 @property (nonatomic, strong)PrimitivesClass *subProp;
 @property (nonatomic, strong)NSDate *dateProp;
 

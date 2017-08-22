@@ -16,19 +16,18 @@ int main(int argc, const char * argv[]) {
         PrimitivesClass *prim = [[PrimitivesClass alloc] initWithInitialVals];
         [prim createRecursiveIvar];
         
-        CFAbsoluteTime start = CFAbsoluteTimeGetCurrent();
         NSDictionary *encodedPrim = [prim encodeToDictionary];
+        NSLog(@"encodedDictionary:\n %@", encodedPrim);
+        
         NSString *encodedJsonStr = [encodedPrim encodeToJSONString];
-        CFAbsoluteTime finish = CFAbsoluteTimeGetCurrent();
-        NSLog(@"%lf", finish - start);
+        NSLog(@"encodedJsonStr:\n %@", encodedJsonStr);
         
-        start = CFAbsoluteTimeGetCurrent();
         NSDictionary *decodeFromJson = [encodedJsonStr jsonDecodeToDictionary];
-        PrimitivesClass *decodedPrim = (PrimitivesClass *)[decodeFromJson codecObjectDecode];
-        finish = CFAbsoluteTimeGetCurrent();
-        NSLog(@"%lf", finish - start);
+        NSLog(@"decodeFromJson:\n %@", decodeFromJson);
         
-        NSLog(@"%@", decodedPrim);
+        PrimitivesClass *decodedPrim = (PrimitivesClass *)[decodeFromJson codecObjectDecode];
+        
+        NSLog(@"decodedPrim:\n %@", decodedPrim);
     }
     return 0;
 }

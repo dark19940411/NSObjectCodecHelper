@@ -131,7 +131,7 @@ NSSet<NSString *> *getIvarsNamesSet(Class class) {
         Ivar thisIvar = ivars[i];
         NSString *name = [NSString stringWithUTF8String:ivar_getName(thisIvar)];
         const char *type = ivar_getTypeEncoding(thisIvar);
-        //因为NSDate对象没法通过JSON序列化，所以只能特殊处理
+        //Specifically handle with NSDate object 
         if (strcmp(type, "@\"NSDate\"") == 0) {
             if (!kDateIvarNames) { kDateIvarNames = [NSMutableSet set]; }
             [kDateIvarNames addObject:name];
