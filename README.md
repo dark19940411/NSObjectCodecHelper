@@ -1,6 +1,9 @@
 # NSObjectCodecHelper
 This is a codec system for encoding any OC objects into a dictionary and JSON written with runtime features. In addition, it can decode a give JSON string to a specific class if that JSON string is encoded by it.
 
+# What's this for?
+This codec helper is based on ivars of a objc class underlyingly. So it will turn all of the data of an object into a dictionary which can be encoded to a JSON. So you can use this helper to turn your own object to a string for inner usage or other data transfer situation. 
+
 # Install
 ## Source
 You can download the project and add `NSObject+CodecHelper.h/.m` files into your project and it's done.
